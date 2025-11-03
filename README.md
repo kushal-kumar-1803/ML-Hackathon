@@ -28,33 +28,30 @@ python -m venv venv
 source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 
-Running
+
+---
+
+## Running
 
 Place data/corpus.txt and data/test.txt (one word per line) in the data/ folder.
 Then run:python hangman_final.py
-
 This will:
-
 Train the RL agent on corpus.txt
-
 Periodically evaluate on test.txt
-
 Run final evaluation with safe thresholding (0.05)
-
 Print official final score (using the PDF formula)
-
 Save training curves as training_curves_final_safe_eval.png
 
-Official scoring
+---
 
+##Official scoring
 Final score uses the Hackathon formula exactly:Final Score = (SuccessRate * 2000) - (WrongGuesses * 5) - (RepeatedGuesses * 2)
 
-Tuning
+---
 
+
+##Tuning
 Adjust threshold in safe_action_selection() within hangman_final.py to shift the final score within a target band without retraining.
-
 To reduce runtime for quick tests, lower N_TRAINING_EPISODES near top of the script.
 
-License
-
-MIT
+---
