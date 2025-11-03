@@ -1,0 +1,10 @@
+pycache/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.idea/
+.ipynb_checkpoints/
+*.png
+.DS_Store
